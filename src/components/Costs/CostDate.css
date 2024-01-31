@@ -1,0 +1,26 @@
+.cost-date {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fefae1;
+    background-color: #2a5b84;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 12px;
+    height: 80px;
+    width: 80px;
+}
+
+.cost-date__month{
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.cost-date__year{
+    font-size: 0.75rem;
+}
+
+.cost-date__day{
+    font-weight: bold;
+    font-size: 1.5rem;
+}

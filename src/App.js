@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import CostList from "./components/Costs/CostList";
+import CostInsert from "./components/CostInsert/CostInsert";
+
+let list = [
+  {
+    id:"c0",
+    data: new Date(2023, 2 ,21),
+    item: "Холодильник", 
+    price:15000
+  },
+  {
+    id:"c1",
+    data: new Date(2023, 2 ,21),
+    item: "Джинсы", 
+    price:2000
+  },
+  {
+    id:"c2",
+    data: new Date(2023, 2 ,21),
+    item: "Смартфон", 
+    price:40000
+  },
+  {
+    id:"c3",
+    data: new Date(2023, 2 ,21),
+    item: "KFC", 
+    price:500
+  }
+]
+
 
 function App() {
+
+const onSaveCostDataHandler = (costData) => {
+  console.log(costData)
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CostInsert onSaveCostData={onSaveCostDataHandler}/>
+      <CostList list = {list}/>
     </div>
   );
 }

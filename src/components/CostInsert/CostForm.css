@@ -1,0 +1,42 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex:after {
+    content:'';
+    width:100%;
+    order:0;
+  }
+  
+  .item.new-string,
+  .item.new-string ~ .item {
+    order:1;
+  }
+
+.insert-cost__controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .insert-cost__control label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .insert-cost__control input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #050505;
+    width: 20rem;
+    max-width: 100%;
+  }
+  
+  .insert-cost__actions {
+    text-align: left;
+  }
