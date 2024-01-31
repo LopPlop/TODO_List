@@ -1,7 +1,8 @@
 import CostList from "./components/Costs/CostList";
 import CostInsert from "./components/CostInsert/CostInsert";
+import { useState } from "react";
 
-let list = [
+const INITIAL_COSTS = [
   {
     id:"c0",
     data: new Date(2023, 2 ,21),
@@ -31,8 +32,13 @@ let list = [
 
 function App() {
 
+const [list, setList] = useState(INITIAL_COSTS);
+
+
 const onSaveCostDataHandler = (costData) => {
-  console.log(costData)
+  setList((prevCost) => {
+    return[costData, ...prevCost]
+  })
 }
 
   return (
